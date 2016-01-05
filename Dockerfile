@@ -11,6 +11,7 @@ RUN apt-get -y update && apt-get -y install \
     gfortran \
     git \
     graphviz-dev \
+    gsl-static \
     libafterimage0 \
     libafterimage-dev \
     libavahi-compat-libdnssd-dev \
