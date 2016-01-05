@@ -39,8 +39,8 @@ WORKDIR /tmp
 
 
 # install ROOT 
-RUN git clone --depth 1 --branch v5-34-23 http://root.cern.ch/git/root.git \
-    && mkdir root-build \
+RUN git clone --depth 1 --branch v5-34-23 http://root.cern.ch/git/root.git
+RUN mkdir root-build \
     && cd root-build \
     && cmake ../root -Dmathmore=ON -Dminuit2=ON -Droofit=ON -Dhdfs=OFF  -Dbuiltin_xrootd=ON -DCMAKE_INSTALL_PREFIX=/usr/local \
     && make -j3 \
