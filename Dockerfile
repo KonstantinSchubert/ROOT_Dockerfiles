@@ -11,7 +11,6 @@ RUN apt-get -y update && apt-get -y install \
     gfortran \
     git \
     graphviz-dev \
-    gsl-static \
     libafterimage0 \
     libafterimage-dev \
     libavahi-compat-libdnssd-dev \
@@ -24,6 +23,7 @@ RUN apt-get -y update && apt-get -y install \
     libpcre3-dev \
     libgl1-mesa-dev \
     libglew1.5-dev \
+    libgsl0-dev \
     libftgl-dev \
     libmysqlclient-dev \
     libfftw3-dev libcfitsio3-dev \
