@@ -16,7 +16,7 @@ WORKDIR /tmp
 
 
 # install ROOT 
-RUN git clone --depth 1 --branch v6-06-00-rc1 http://root.cern.ch/git/root.git
+RUN git clone --depth 1 --branch v6-07-01-ROOTaaS-1 http://root.cern.ch/git/root.git
 RUN mkdir root-build     && cd root-build     && cmake ../root -Dmathmore=ON -Dminuit2=ON -Droofit=ON -Dhdfs=OFF  -Dbuiltin_xrootd=ON -DCMAKE_INSTALL_PREFIX=/usr/local     && make -j3     && cmake --build . --target install     && cd ..     && rm -rf root root-build
 
 
