@@ -8,8 +8,12 @@ MAINTAINER Konstantin Schubert <schubert.konstantin@gmail.com>
 USER root
 RUN apt-get -y update && apt-get -y install     build-essential     cmake     gfortran     git     graphviz-dev     libafterimage0     libafterimage-dev     libavahi-compat-libdnssd-dev     libxpm-dev     libxft-dev     libxext-dev     libpng3     libjpeg8     libssl-dev     libpcre3-dev     libgl1-mesa-dev     libglew1.5-dev     libgsl0-dev     libftgl-dev     libmysqlclient-dev     libfftw3-dev libcfitsio3-dev     libldap2-dev     libxml2-dev     libx11-dev     vim
 
+
 # install boost
 RUN apt-get -y install  libboost-all-dev
+
+#trying to fix failing installs
+RUN apt-get -y install  ncurses-dev libncurses5
 
 
 WORKDIR /tmp
