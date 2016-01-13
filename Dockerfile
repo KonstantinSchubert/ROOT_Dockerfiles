@@ -16,7 +16,7 @@ WORKDIR /tmp
 # By cloning all branches, we get the same base image for all builds
 RUN git clone --depth 1 http://root.cern.ch/git/root.git
 # install ROOT 
-RUN cd root && git checkout tag/v5-34-23 http://root.cern.ch/git/root.git
+RUN cd root && git checkout tag/v5-99-03 http://root.cern.ch/git/root.git
 RUN mkdir root-build     && cd root-build     && cmake ../root -Dmathmore=ON -Dminuit2=ON -Droofit=ON -Dhdfs=OFF  -Dbuiltin_xrootd=ON -DCMAKE_INSTALL_PREFIX=/usr/local     && make -j3     && cmake --build . --target install     && cd ..     && rm -rf root root-build
 
 
